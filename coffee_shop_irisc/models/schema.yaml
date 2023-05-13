@@ -9,6 +9,14 @@ models:
         tests:
           - unique
           - not_null
+  - name: user_stitching
+    description: merged customers
+    columns:
+      - name: id
+        description: Primary key of the model
+        tests:
+          - unique
+          - not_null
 sources:
   - name: coffee_shop
     project: analytics-engineers-club
@@ -21,6 +29,15 @@ sources:
               - not_null
  
       - name: orders
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+  - name: web_tracking
+    project: analytics-engineers-club
+    tables:
+      - name: pageviews
         columns:
           - name: id
             tests:

@@ -1842,3 +1842,1137 @@ having count(*) > 1
 [0m21:47:25.910753 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=1 SKIP=0 TOTAL=7
 [0m21:47:25.911614 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f38c4bbb0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f38c4d68130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f38c4b99a30>]}
 [0m21:47:25.912228 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-05-13 23:19:49.241706 | df8d1de8-6dc2-4b75-bc62-ce2f3ccb8b32 ==============================
+[0m23:19:49.241706 [info ] [MainThread]: Running with dbt=1.4.5
+[0m23:19:49.247042 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/vscode/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m23:19:49.247532 [debug] [MainThread]: Tracking: tracking
+[0m23:19:49.258342 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9273b85fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9273b747f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9273b74d90>]}
+[0m23:19:49.282013 [debug] [MainThread]: checksum: e05dd7cee44d39ae8ac27965cacd8a6d8d0ab4e8185101e0db84e98f79bee0b6, vars: {}, profile: None, target: None, version: 1.4.5
+[0m23:19:49.461709 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m23:19:49.462357 [debug] [MainThread]: Partial parsing: added file: coffee_shop://models/user_stitching.sql
+[0m23:19:49.462917 [debug] [MainThread]: Partial parsing: updated file: coffee_shop://models/schema.yaml
+[0m23:19:49.484972 [debug] [MainThread]: 1699: static parser successfully parsed user_stitching.sql
+[0m23:19:49.620259 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.coffee_shop_irisc
+[0m23:19:49.626613 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'df8d1de8-6dc2-4b75-bc62-ce2f3ccb8b32', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f92739ec310>]}
+[0m23:19:49.635794 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'df8d1de8-6dc2-4b75-bc62-ce2f3ccb8b32', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9273ad9e50>]}
+[0m23:19:49.636186 [info ] [MainThread]: Found 3 models, 11 tests, 0 snapshots, 0 analyses, 337 macros, 0 operations, 0 seed files, 3 sources, 0 exposures, 0 metrics
+[0m23:19:49.636700 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'df8d1de8-6dc2-4b75-bc62-ce2f3ccb8b32', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9273a86040>]}
+[0m23:19:49.638581 [info ] [MainThread]: 
+[0m23:19:49.642460 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m23:19:49.643888 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_aec-students'
+[0m23:19:49.644358 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:19:53.751507 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_aec-students_dbt_irisc'
+[0m23:19:53.752776 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:19:53.981861 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'df8d1de8-6dc2-4b75-bc62-ce2f3ccb8b32', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9273ad9190>]}
+[0m23:19:53.983480 [info ] [MainThread]: Concurrency: 8 threads (target='dev')
+[0m23:19:53.984905 [info ] [MainThread]: 
+[0m23:19:54.001849 [debug] [Thread-1  ]: Began running node model.coffee_shop.customers
+[0m23:19:54.002549 [debug] [Thread-2  ]: Began running node model.coffee_shop.user_stitching
+[0m23:19:54.003070 [info ] [Thread-1  ]: 1 of 3 START sql table model dbt_irisc.customers ............................... [RUN]
+[0m23:19:54.004819 [debug] [Thread-1  ]: Acquiring new bigquery connection 'model.coffee_shop.customers'
+[0m23:19:54.003700 [info ] [Thread-2  ]: 2 of 3 START sql table model dbt_irisc.user_stitching .......................... [RUN]
+[0m23:19:54.005388 [debug] [Thread-1  ]: Began compiling node model.coffee_shop.customers
+[0m23:19:54.006453 [debug] [Thread-2  ]: Acquiring new bigquery connection 'model.coffee_shop.user_stitching'
+[0m23:19:54.010430 [debug] [Thread-1  ]: Writing injected SQL for node "model.coffee_shop.customers"
+[0m23:19:54.010811 [debug] [Thread-2  ]: Began compiling node model.coffee_shop.user_stitching
+[0m23:19:54.013998 [debug] [Thread-2  ]: Writing injected SQL for node "model.coffee_shop.user_stitching"
+[0m23:19:54.014455 [debug] [Thread-1  ]: Timing info for model.coffee_shop.customers (compile): 2023-05-13 23:19:54.006772 => 2023-05-13 23:19:54.014311
+[0m23:19:54.014897 [debug] [Thread-1  ]: Began executing node model.coffee_shop.customers
+[0m23:19:54.025523 [debug] [Thread-2  ]: Timing info for model.coffee_shop.user_stitching (compile): 2023-05-13 23:19:54.011344 => 2023-05-13 23:19:54.025450
+[0m23:19:54.032375 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m23:19:54.032748 [debug] [Thread-2  ]: Began executing node model.coffee_shop.user_stitching
+[0m23:19:54.063236 [debug] [Thread-2  ]: Writing runtime sql for node "model.coffee_shop.user_stitching"
+[0m23:19:54.064139 [debug] [Thread-2  ]: Opening a new connection, currently in state init
+[0m23:19:54.065126 [debug] [Thread-2  ]: On model.coffee_shop.user_stitching: /* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "model.coffee_shop.user_stitching"} */
+
+  
+    
+
+    create or replace table `aec-students`.`dbt_irisc`.`user_stitching`
+    
+    
+    OPTIONS()
+    as (
+      
+
+select a.id
+  , case when a.customer_id is not null then b.vistor_id else a.visitor_id end as visitor_id
+  , a.device_type
+  , a.timestamp
+  , a.page
+  , a.customer_id
+from `analytics-engineers-club.web_tracking.pageviews` a
+left join (select distinct customer_id as customer_id, max(visitor_id) as vistor_id
+    from `analytics-engineers-club.web_tracking.pageviews`
+    where customer_id is not null
+    group by 1) b on a.customer_id=b.customer_id
+    );
+  
+[0m23:19:54.380526 [debug] [Thread-1  ]: Writing runtime sql for node "model.coffee_shop.customers"
+[0m23:19:54.381601 [debug] [Thread-1  ]: On model.coffee_shop.customers: /* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "model.coffee_shop.customers"} */
+
+  
+    
+
+    create or replace table `aec-students`.`dbt_irisc`.`customers`
+    
+    
+    OPTIONS()
+    as (
+      
+
+select 
+  customers.id as customer_id
+  , name
+  , email
+  , min(created_at) as first_order_at
+  , count(*) as number_of_orders
+from `analytics-engineers-club.coffee_shop.customers` customers
+left join `analytics-engineers-club.coffee_shop.orders` orders on customers.id=orders.customer_id
+group by 1,2,3
+    );
+  
+[0m23:19:59.407894 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=aec-students&j=bq:US:b8a3592a-d6fb-4e4f-8476-f31715488e63&page=queryresults
+[0m23:19:59.428028 [debug] [Thread-1  ]: Timing info for model.coffee_shop.customers (execute): 2023-05-13 23:19:54.015232 => 2023-05-13 23:19:59.427955
+[0m23:19:59.428928 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'df8d1de8-6dc2-4b75-bc62-ce2f3ccb8b32', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9273597ca0>]}
+[0m23:19:59.429574 [info ] [Thread-1  ]: 1 of 3 OK created sql table model dbt_irisc.customers .......................... [[32mCREATE TABLE (174.4k rows, 21.3 MB processed)[0m in 5.42s]
+[0m23:19:59.431856 [debug] [Thread-1  ]: Finished running node model.coffee_shop.customers
+[0m23:19:59.432830 [debug] [Thread-4  ]: Began running node model.coffee_shop.monthly_customers
+[0m23:19:59.433261 [info ] [Thread-4  ]: 3 of 3 START sql view model dbt_irisc.monthly_customers ........................ [RUN]
+[0m23:19:59.434444 [debug] [Thread-4  ]: Acquiring new bigquery connection 'model.coffee_shop.monthly_customers'
+[0m23:19:59.434770 [debug] [Thread-4  ]: Began compiling node model.coffee_shop.monthly_customers
+[0m23:19:59.439431 [debug] [Thread-4  ]: Writing injected SQL for node "model.coffee_shop.monthly_customers"
+[0m23:19:59.439961 [debug] [Thread-4  ]: Timing info for model.coffee_shop.monthly_customers (compile): 2023-05-13 23:19:59.435050 => 2023-05-13 23:19:59.439887
+[0m23:19:59.440282 [debug] [Thread-4  ]: Began executing node model.coffee_shop.monthly_customers
+[0m23:19:59.461418 [debug] [Thread-4  ]: Writing runtime sql for node "model.coffee_shop.monthly_customers"
+[0m23:19:59.462004 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m23:19:59.462417 [debug] [Thread-4  ]: On model.coffee_shop.monthly_customers: /* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "model.coffee_shop.monthly_customers"} */
+
+
+  create or replace view `aec-students`.`dbt_irisc`.`monthly_customers`
+  OPTIONS()
+  as select
+    date_trunc(first_order_at, month) as signup_month,
+    count(*) as new_customers
+from `aec-students`.`dbt_irisc`.`customers`
+group by 1;
+
+
+[0m23:20:00.201464 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=aec-students&j=bq:US:b9ab13d3-3add-4ef1-b79b-145357481ef5&page=queryresults
+[0m23:20:00.205920 [debug] [Thread-4  ]: Timing info for model.coffee_shop.monthly_customers (execute): 2023-05-13 23:19:59.440500 => 2023-05-13 23:20:00.205804
+[0m23:20:00.208050 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'df8d1de8-6dc2-4b75-bc62-ce2f3ccb8b32', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f927045eeb0>]}
+[0m23:20:00.208681 [info ] [Thread-4  ]: 3 of 3 OK created sql view model dbt_irisc.monthly_customers ................... [[32mCREATE VIEW (0 processed)[0m in 0.77s]
+[0m23:20:00.209372 [debug] [Thread-4  ]: Finished running node model.coffee_shop.monthly_customers
+[0m23:20:06.041605 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=aec-students&j=bq:US:cd8bec19-6708-4167-a0e5-0a9d5aae4dfa&page=queryresults
+[0m23:20:06.043782 [debug] [Thread-2  ]: Timing info for model.coffee_shop.user_stitching (execute): 2023-05-13 23:19:54.034816 => 2023-05-13 23:20:06.043712
+[0m23:20:06.044702 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'df8d1de8-6dc2-4b75-bc62-ce2f3ccb8b32', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9273570ac0>]}
+[0m23:20:06.045268 [info ] [Thread-2  ]: 2 of 3 OK created sql table model dbt_irisc.user_stitching ..................... [[32mCREATE TABLE (5.8m rows, 606.0 MB processed)[0m in 12.04s]
+[0m23:20:06.046259 [debug] [Thread-2  ]: Finished running node model.coffee_shop.user_stitching
+[0m23:20:06.048796 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m23:20:06.049547 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:20:06.049853 [debug] [MainThread]: Connection 'model.coffee_shop.customers' was properly closed.
+[0m23:20:06.050129 [debug] [MainThread]: Connection 'model.coffee_shop.user_stitching' was properly closed.
+[0m23:20:06.050392 [debug] [MainThread]: Connection 'model.coffee_shop.monthly_customers' was properly closed.
+[0m23:20:06.050741 [info ] [MainThread]: 
+[0m23:20:06.051485 [info ] [MainThread]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 16.41 seconds (16.41s).
+[0m23:20:06.052740 [debug] [MainThread]: Command end result
+[0m23:20:06.061411 [info ] [MainThread]: 
+[0m23:20:06.062121 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:20:06.062764 [info ] [MainThread]: 
+[0m23:20:06.063503 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m23:20:06.064339 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9273a63d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9273a63a60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9273a63f10>]}
+[0m23:20:06.064734 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-05-13 23:20:16.493389 | c1dc264c-1cdd-4039-89b9-af27a4af68ff ==============================
+[0m23:20:16.493389 [info ] [MainThread]: Running with dbt=1.4.5
+[0m23:20:16.497038 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/vscode/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'indirect_selection': 'eager', 'which': 'test', 'rpc_method': 'test'}
+[0m23:20:16.497476 [debug] [MainThread]: Tracking: tracking
+[0m23:20:16.505259 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f259c2a8d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f259c2fc730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f259c2fcfd0>]}
+[0m23:20:16.525824 [debug] [MainThread]: checksum: e05dd7cee44d39ae8ac27965cacd8a6d8d0ab4e8185101e0db84e98f79bee0b6, vars: {}, profile: None, target: None, version: 1.4.5
+[0m23:20:16.579690 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:20:16.580313 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:20:16.581844 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.coffee_shop_irisc
+[0m23:20:16.594619 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c1dc264c-1cdd-4039-89b9-af27a4af68ff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f259c0e2f70>]}
+[0m23:20:16.612074 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c1dc264c-1cdd-4039-89b9-af27a4af68ff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f259c213880>]}
+[0m23:20:16.612821 [info ] [MainThread]: Found 3 models, 11 tests, 0 snapshots, 0 analyses, 337 macros, 0 operations, 0 seed files, 3 sources, 0 exposures, 0 metrics
+[0m23:20:16.614687 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c1dc264c-1cdd-4039-89b9-af27a4af68ff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f259c2138b0>]}
+[0m23:20:16.619451 [info ] [MainThread]: 
+[0m23:20:16.624093 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m23:20:16.626855 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_aec-students_dbt_irisc'
+[0m23:20:16.627534 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:20:17.728846 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c1dc264c-1cdd-4039-89b9-af27a4af68ff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f259c2138e0>]}
+[0m23:20:17.730187 [info ] [MainThread]: Concurrency: 8 threads (target='dev')
+[0m23:20:17.731158 [info ] [MainThread]: 
+[0m23:20:17.736711 [debug] [Thread-1  ]: Began running node test.coffee_shop.not_null_customers_customer_id.5c9bf9911d
+[0m23:20:17.737107 [debug] [Thread-2  ]: Began running node test.coffee_shop.not_null_user_stitching_id.12ff3725e0
+[0m23:20:17.737431 [debug] [Thread-3  ]: Began running node test.coffee_shop.source_not_null_coffee_shop_customers_id.d265e0f7a0
+[0m23:20:17.737717 [debug] [Thread-4  ]: Began running node test.coffee_shop.source_not_null_coffee_shop_orders_id.734c497108
+[0m23:20:17.738135 [debug] [Thread-5  ]: Began running node test.coffee_shop.source_not_null_coffee_shop_pageviews_id.1205e0f0b8
+[0m23:20:17.738643 [debug] [Thread-6  ]: Began running node test.coffee_shop.source_unique_coffee_shop_customers_id.33a28346d5
+[0m23:20:17.738949 [debug] [Thread-7  ]: Began running node test.coffee_shop.source_unique_coffee_shop_orders_id.76bb24edf7
+[0m23:20:17.739262 [debug] [Thread-8  ]: Began running node test.coffee_shop.source_unique_coffee_shop_pageviews_id.dbb3465061
+[0m23:20:17.739654 [info ] [Thread-1  ]: 1 of 11 START test not_null_customers_customer_id .............................. [RUN]
+[0m23:20:17.743890 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.coffee_shop.not_null_customers_customer_id.5c9bf9911d'
+[0m23:20:17.744541 [debug] [Thread-1  ]: Began compiling node test.coffee_shop.not_null_customers_customer_id.5c9bf9911d
+[0m23:20:17.740646 [info ] [Thread-3  ]: 3 of 11 START test source_not_null_coffee_shop_customers_id .................... [RUN]
+[0m23:20:17.740125 [info ] [Thread-2  ]: 2 of 11 START test not_null_user_stitching_id .................................. [RUN]
+[0m23:20:17.741133 [info ] [Thread-4  ]: 4 of 11 START test source_not_null_coffee_shop_orders_id ....................... [RUN]
+[0m23:20:17.767893 [debug] [Thread-4  ]: Acquiring new bigquery connection 'test.coffee_shop.source_not_null_coffee_shop_orders_id.734c497108'
+[0m23:20:17.741769 [info ] [Thread-6  ]: 6 of 11 START test source_unique_coffee_shop_customers_id ...................... [RUN]
+[0m23:20:17.781121 [debug] [Thread-6  ]: Acquiring new bigquery connection 'test.coffee_shop.source_unique_coffee_shop_customers_id.33a28346d5'
+[0m23:20:17.781640 [debug] [Thread-6  ]: Began compiling node test.coffee_shop.source_unique_coffee_shop_customers_id.33a28346d5
+[0m23:20:17.764306 [debug] [Thread-1  ]: Writing injected SQL for node "test.coffee_shop.not_null_customers_customer_id.5c9bf9911d"
+[0m23:20:17.764952 [debug] [Thread-3  ]: Acquiring new bigquery connection 'test.coffee_shop.source_not_null_coffee_shop_customers_id.d265e0f7a0'
+[0m23:20:17.765832 [debug] [Thread-2  ]: Acquiring new bigquery connection 'test.coffee_shop.not_null_user_stitching_id.12ff3725e0'
+[0m23:20:17.741454 [info ] [Thread-5  ]: 5 of 11 START test source_not_null_coffee_shop_pageviews_id .................... [RUN]
+[0m23:20:17.742297 [info ] [Thread-7  ]: 7 of 11 START test source_unique_coffee_shop_orders_id ......................... [RUN]
+[0m23:20:17.804906 [debug] [Thread-7  ]: Acquiring new bigquery connection 'test.coffee_shop.source_unique_coffee_shop_orders_id.76bb24edf7'
+[0m23:20:17.805336 [debug] [Thread-7  ]: Began compiling node test.coffee_shop.source_unique_coffee_shop_orders_id.76bb24edf7
+[0m23:20:17.742646 [info ] [Thread-8  ]: 8 of 11 START test source_unique_coffee_shop_pageviews_id ...................... [RUN]
+[0m23:20:17.813749 [debug] [Thread-8  ]: Acquiring new bigquery connection 'test.coffee_shop.source_unique_coffee_shop_pageviews_id.dbb3465061'
+[0m23:20:17.814256 [debug] [Thread-8  ]: Began compiling node test.coffee_shop.source_unique_coffee_shop_pageviews_id.dbb3465061
+[0m23:20:17.801147 [debug] [Thread-4  ]: Began compiling node test.coffee_shop.source_not_null_coffee_shop_orders_id.734c497108
+[0m23:20:17.802065 [debug] [Thread-3  ]: Began compiling node test.coffee_shop.source_not_null_coffee_shop_customers_id.d265e0f7a0
+[0m23:20:17.812552 [debug] [Thread-1  ]: Timing info for test.coffee_shop.not_null_customers_customer_id.5c9bf9911d (compile): 2023-05-13 23:20:17.745057 => 2023-05-13 23:20:17.812413
+[0m23:20:17.803857 [debug] [Thread-5  ]: Acquiring new bigquery connection 'test.coffee_shop.source_not_null_coffee_shop_pageviews_id.1205e0f0b8'
+[0m23:20:17.802594 [debug] [Thread-2  ]: Began compiling node test.coffee_shop.not_null_user_stitching_id.12ff3725e0
+[0m23:20:17.831726 [debug] [Thread-3  ]: Writing injected SQL for node "test.coffee_shop.source_not_null_coffee_shop_customers_id.d265e0f7a0"
+[0m23:20:17.834744 [debug] [Thread-6  ]: Writing injected SQL for node "test.coffee_shop.source_unique_coffee_shop_customers_id.33a28346d5"
+[0m23:20:17.837742 [debug] [Thread-4  ]: Writing injected SQL for node "test.coffee_shop.source_not_null_coffee_shop_orders_id.734c497108"
+[0m23:20:17.840689 [debug] [Thread-7  ]: Writing injected SQL for node "test.coffee_shop.source_unique_coffee_shop_orders_id.76bb24edf7"
+[0m23:20:17.940681 [debug] [Thread-8  ]: Writing injected SQL for node "test.coffee_shop.source_unique_coffee_shop_pageviews_id.dbb3465061"
+[0m23:20:17.941049 [debug] [Thread-1  ]: Began executing node test.coffee_shop.not_null_customers_customer_id.5c9bf9911d
+[0m23:20:17.941458 [debug] [Thread-5  ]: Began compiling node test.coffee_shop.source_not_null_coffee_shop_pageviews_id.1205e0f0b8
+[0m23:20:17.946323 [debug] [Thread-2  ]: Writing injected SQL for node "test.coffee_shop.not_null_user_stitching_id.12ff3725e0"
+[0m23:20:17.947287 [debug] [Thread-3  ]: Timing info for test.coffee_shop.source_not_null_coffee_shop_customers_id.d265e0f7a0 (compile): 2023-05-13 23:20:17.825207 => 2023-05-13 23:20:17.947163
+[0m23:20:17.971497 [debug] [Thread-3  ]: Began executing node test.coffee_shop.source_not_null_coffee_shop_customers_id.d265e0f7a0
+[0m23:20:17.948557 [debug] [Thread-6  ]: Timing info for test.coffee_shop.source_unique_coffee_shop_customers_id.33a28346d5 (compile): 2023-05-13 23:20:17.782033 => 2023-05-13 23:20:17.948494
+[0m23:20:17.980649 [debug] [Thread-6  ]: Began executing node test.coffee_shop.source_unique_coffee_shop_customers_id.33a28346d5
+[0m23:20:17.949162 [debug] [Thread-7  ]: Timing info for test.coffee_shop.source_unique_coffee_shop_orders_id.76bb24edf7 (compile): 2023-05-13 23:20:17.805636 => 2023-05-13 23:20:17.949038
+[0m23:20:17.986403 [debug] [Thread-7  ]: Began executing node test.coffee_shop.source_unique_coffee_shop_orders_id.76bb24edf7
+[0m23:20:17.947708 [debug] [Thread-4  ]: Timing info for test.coffee_shop.source_not_null_coffee_shop_orders_id.734c497108 (compile): 2023-05-13 23:20:17.818971 => 2023-05-13 23:20:17.947617
+[0m23:20:17.959452 [debug] [Thread-5  ]: Writing injected SQL for node "test.coffee_shop.source_not_null_coffee_shop_pageviews_id.1205e0f0b8"
+[0m23:20:17.954819 [debug] [Thread-8  ]: Timing info for test.coffee_shop.source_unique_coffee_shop_pageviews_id.dbb3465061 (compile): 2023-05-13 23:20:17.814610 => 2023-05-13 23:20:17.954727
+[0m23:20:17.993176 [debug] [Thread-4  ]: Began executing node test.coffee_shop.source_not_null_coffee_shop_orders_id.734c497108
+[0m23:20:17.993734 [debug] [Thread-2  ]: Timing info for test.coffee_shop.not_null_user_stitching_id.12ff3725e0 (compile): 2023-05-13 23:20:17.941763 => 2023-05-13 23:20:17.993631
+[0m23:20:18.018393 [debug] [Thread-6  ]: Writing runtime sql for node "test.coffee_shop.source_unique_coffee_shop_customers_id.33a28346d5"
+[0m23:20:18.020227 [debug] [Thread-7  ]: Writing runtime sql for node "test.coffee_shop.source_unique_coffee_shop_orders_id.76bb24edf7"
+[0m23:20:18.017557 [debug] [Thread-3  ]: Writing runtime sql for node "test.coffee_shop.source_not_null_coffee_shop_customers_id.d265e0f7a0"
+[0m23:20:18.021602 [debug] [Thread-1  ]: Writing runtime sql for node "test.coffee_shop.not_null_customers_customer_id.5c9bf9911d"
+[0m23:20:18.022047 [debug] [Thread-8  ]: Began executing node test.coffee_shop.source_unique_coffee_shop_pageviews_id.dbb3465061
+[0m23:20:18.030718 [debug] [Thread-8  ]: Writing runtime sql for node "test.coffee_shop.source_unique_coffee_shop_pageviews_id.dbb3465061"
+[0m23:20:18.031643 [debug] [Thread-8  ]: Opening a new connection, currently in state init
+[0m23:20:18.026332 [debug] [Thread-2  ]: Began executing node test.coffee_shop.not_null_user_stitching_id.12ff3725e0
+[0m23:20:18.034775 [debug] [Thread-2  ]: Writing runtime sql for node "test.coffee_shop.not_null_user_stitching_id.12ff3725e0"
+[0m23:20:18.035309 [debug] [Thread-2  ]: Opening a new connection, currently in state init
+[0m23:20:18.035702 [debug] [Thread-2  ]: On test.coffee_shop.not_null_user_stitching_id.12ff3725e0: /* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "test.coffee_shop.not_null_user_stitching_id.12ff3725e0"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from `aec-students`.`dbt_irisc`.`user_stitching`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:20:18.025668 [debug] [Thread-4  ]: Writing runtime sql for node "test.coffee_shop.source_not_null_coffee_shop_orders_id.734c497108"
+[0m23:20:18.031134 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m23:20:18.037063 [debug] [Thread-1  ]: On test.coffee_shop.not_null_customers_customer_id.5c9bf9911d: /* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "test.coffee_shop.not_null_customers_customer_id.5c9bf9911d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select customer_id
+from `aec-students`.`dbt_irisc`.`customers`
+where customer_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:20:18.026002 [debug] [Thread-5  ]: Timing info for test.coffee_shop.source_not_null_coffee_shop_pageviews_id.1205e0f0b8 (compile): 2023-05-13 23:20:17.955028 => 2023-05-13 23:20:18.025936
+[0m23:20:18.027964 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m23:20:18.027190 [debug] [Thread-6  ]: Opening a new connection, currently in state init
+[0m23:20:18.042177 [debug] [Thread-6  ]: On test.coffee_shop.source_unique_coffee_shop_customers_id.33a28346d5: /* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "test.coffee_shop.source_unique_coffee_shop_customers_id.33a28346d5"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+
+  select id as unique_field
+  from `analytics-engineers-club`.`coffee_shop`.`customers`
+  where id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m23:20:18.032418 [debug] [Thread-8  ]: On test.coffee_shop.source_unique_coffee_shop_pageviews_id.dbb3465061: /* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "test.coffee_shop.source_unique_coffee_shop_pageviews_id.dbb3465061"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+
+  select id as unique_field
+  from `analytics-engineers-club`.`coffee_shop`.`pageviews`
+  where id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m23:20:18.038826 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m23:20:18.041036 [debug] [Thread-5  ]: Began executing node test.coffee_shop.source_not_null_coffee_shop_pageviews_id.1205e0f0b8
+[0m23:20:18.050929 [debug] [Thread-5  ]: Writing runtime sql for node "test.coffee_shop.source_not_null_coffee_shop_pageviews_id.1205e0f0b8"
+[0m23:20:18.028285 [debug] [Thread-7  ]: Opening a new connection, currently in state init
+[0m23:20:18.044371 [debug] [Thread-4  ]: On test.coffee_shop.source_not_null_coffee_shop_orders_id.734c497108: /* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "test.coffee_shop.source_not_null_coffee_shop_orders_id.734c497108"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from `analytics-engineers-club`.`coffee_shop`.`orders`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:20:18.041439 [debug] [Thread-3  ]: On test.coffee_shop.source_not_null_coffee_shop_customers_id.d265e0f7a0: /* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "test.coffee_shop.source_not_null_coffee_shop_customers_id.d265e0f7a0"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from `analytics-engineers-club`.`coffee_shop`.`customers`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:20:18.060078 [debug] [Thread-7  ]: On test.coffee_shop.source_unique_coffee_shop_orders_id.76bb24edf7: /* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "test.coffee_shop.source_unique_coffee_shop_orders_id.76bb24edf7"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+
+  select id as unique_field
+  from `analytics-engineers-club`.`coffee_shop`.`orders`
+  where id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m23:20:18.068044 [debug] [Thread-5  ]: Opening a new connection, currently in state init
+[0m23:20:18.068989 [debug] [Thread-5  ]: On test.coffee_shop.source_not_null_coffee_shop_pageviews_id.1205e0f0b8: /* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "test.coffee_shop.source_not_null_coffee_shop_pageviews_id.1205e0f0b8"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from `analytics-engineers-club`.`coffee_shop`.`pageviews`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:20:18.695378 [debug] [Thread-5  ]: BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "test.coffee_shop.source_not_null_coffee_shop_pageviews_id.1205e0f0b8"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from `analytics-engineers-club`.`coffee_shop`.`pageviews`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:20:18.696189 [debug] [Thread-5  ]: BigQuery adapter: 404 Not found: Table analytics-engineers-club:coffee_shop.pageviews was not found in location US
+
+Location: US
+Job ID: 7b984073-4f74-4933-a7ac-14baf0b39a8b
+
+[0m23:20:18.696921 [debug] [Thread-5  ]: Timing info for test.coffee_shop.source_not_null_coffee_shop_pageviews_id.1205e0f0b8 (execute): 2023-05-13 23:20:18.047355 => 2023-05-13 23:20:18.696819
+[0m23:20:18.732805 [debug] [Thread-5  ]: Runtime Error in test source_not_null_coffee_shop_pageviews_id (models/schema.yaml)
+  404 Not found: Table analytics-engineers-club:coffee_shop.pageviews was not found in location US
+  
+  Location: US
+  Job ID: 7b984073-4f74-4933-a7ac-14baf0b39a8b
+  
+[0m23:20:18.733487 [error] [Thread-5  ]: 5 of 11 ERROR source_not_null_coffee_shop_pageviews_id ......................... [[31mERROR[0m in 0.93s]
+[0m23:20:18.736366 [debug] [Thread-5  ]: Finished running node test.coffee_shop.source_not_null_coffee_shop_pageviews_id.1205e0f0b8
+[0m23:20:18.736843 [debug] [Thread-5  ]: Began running node test.coffee_shop.test1
+[0m23:20:18.737362 [info ] [Thread-5  ]: 9 of 11 START test test1 ....................................................... [RUN]
+[0m23:20:18.738540 [debug] [Thread-5  ]: Acquiring new bigquery connection 'test.coffee_shop.test1'
+[0m23:20:18.739002 [debug] [Thread-5  ]: Began compiling node test.coffee_shop.test1
+[0m23:20:18.742246 [debug] [Thread-5  ]: Writing injected SQL for node "test.coffee_shop.test1"
+[0m23:20:18.742910 [debug] [Thread-5  ]: Timing info for test.coffee_shop.test1 (compile): 2023-05-13 23:20:18.739343 => 2023-05-13 23:20:18.742807
+[0m23:20:18.743399 [debug] [Thread-5  ]: Began executing node test.coffee_shop.test1
+[0m23:20:18.752023 [debug] [Thread-5  ]: Writing runtime sql for node "test.coffee_shop.test1"
+[0m23:20:18.752851 [debug] [Thread-5  ]: Opening a new connection, currently in state closed
+[0m23:20:18.753431 [debug] [Thread-5  ]: On test.coffee_shop.test1: /* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "test.coffee_shop.test1"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      select *
+from `aec-students.dbt_irisc.customers`
+where customer_id is not null
+      
+    ) dbt_internal_test
+[0m23:20:18.910010 [debug] [Thread-8  ]: BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "test.coffee_shop.source_unique_coffee_shop_pageviews_id.dbb3465061"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+
+  select id as unique_field
+  from `analytics-engineers-club`.`coffee_shop`.`pageviews`
+  where id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m23:20:18.910419 [debug] [Thread-8  ]: BigQuery adapter: 404 Not found: Table analytics-engineers-club:coffee_shop.pageviews was not found in location US
+
+Location: US
+Job ID: 429eb146-f66f-40fd-be1f-c124001a7297
+
+[0m23:20:18.910893 [debug] [Thread-8  ]: Timing info for test.coffee_shop.source_unique_coffee_shop_pageviews_id.dbb3465061 (execute): 2023-05-13 23:20:18.028558 => 2023-05-13 23:20:18.910806
+[0m23:20:18.913944 [debug] [Thread-8  ]: Runtime Error in test source_unique_coffee_shop_pageviews_id (models/schema.yaml)
+  404 Not found: Table analytics-engineers-club:coffee_shop.pageviews was not found in location US
+  
+  Location: US
+  Job ID: 429eb146-f66f-40fd-be1f-c124001a7297
+  
+[0m23:20:18.914380 [error] [Thread-8  ]: 8 of 11 ERROR source_unique_coffee_shop_pageviews_id ........................... [[31mERROR[0m in 1.10s]
+[0m23:20:18.914937 [debug] [Thread-8  ]: Finished running node test.coffee_shop.source_unique_coffee_shop_pageviews_id.dbb3465061
+[0m23:20:18.915582 [debug] [Thread-8  ]: Began running node test.coffee_shop.unique_customers_customer_id.c5af1ff4b1
+[0m23:20:18.916054 [info ] [Thread-8  ]: 10 of 11 START test unique_customers_customer_id ............................... [RUN]
+[0m23:20:18.917295 [debug] [Thread-8  ]: Acquiring new bigquery connection 'test.coffee_shop.unique_customers_customer_id.c5af1ff4b1'
+[0m23:20:18.917641 [debug] [Thread-8  ]: Began compiling node test.coffee_shop.unique_customers_customer_id.c5af1ff4b1
+[0m23:20:18.923634 [debug] [Thread-8  ]: Writing injected SQL for node "test.coffee_shop.unique_customers_customer_id.c5af1ff4b1"
+[0m23:20:18.924142 [debug] [Thread-8  ]: Timing info for test.coffee_shop.unique_customers_customer_id.c5af1ff4b1 (compile): 2023-05-13 23:20:18.917870 => 2023-05-13 23:20:18.924069
+[0m23:20:18.924453 [debug] [Thread-8  ]: Began executing node test.coffee_shop.unique_customers_customer_id.c5af1ff4b1
+[0m23:20:18.926728 [debug] [Thread-8  ]: Writing runtime sql for node "test.coffee_shop.unique_customers_customer_id.c5af1ff4b1"
+[0m23:20:18.927260 [debug] [Thread-8  ]: Opening a new connection, currently in state closed
+[0m23:20:18.927656 [debug] [Thread-8  ]: On test.coffee_shop.unique_customers_customer_id.c5af1ff4b1: /* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "test.coffee_shop.unique_customers_customer_id.c5af1ff4b1"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+
+  select customer_id as unique_field
+  from `aec-students`.`dbt_irisc`.`customers`
+  where customer_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m23:20:19.448590 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=aec-students&j=bq:US:7f6673cb-44f5-4a9c-b7bf-326e8e282e70&page=queryresults
+[0m23:20:19.451524 [debug] [Thread-4  ]: Timing info for test.coffee_shop.source_not_null_coffee_shop_orders_id.734c497108 (execute): 2023-05-13 23:20:18.022429 => 2023-05-13 23:20:19.451421
+[0m23:20:19.453407 [info ] [Thread-4  ]: 4 of 11 PASS source_not_null_coffee_shop_orders_id ............................. [[32mPASS[0m in 1.69s]
+[0m23:20:19.456746 [debug] [Thread-4  ]: Finished running node test.coffee_shop.source_not_null_coffee_shop_orders_id.734c497108
+[0m23:20:19.457361 [debug] [Thread-4  ]: Began running node test.coffee_shop.unique_user_stitching_id.6500d27439
+[0m23:20:19.457886 [info ] [Thread-4  ]: 11 of 11 START test unique_user_stitching_id ................................... [RUN]
+[0m23:20:19.459034 [debug] [Thread-4  ]: Acquiring new bigquery connection 'test.coffee_shop.unique_user_stitching_id.6500d27439'
+[0m23:20:19.459739 [debug] [Thread-4  ]: Began compiling node test.coffee_shop.unique_user_stitching_id.6500d27439
+[0m23:20:19.465266 [debug] [Thread-4  ]: Writing injected SQL for node "test.coffee_shop.unique_user_stitching_id.6500d27439"
+[0m23:20:19.465815 [debug] [Thread-4  ]: Timing info for test.coffee_shop.unique_user_stitching_id.6500d27439 (compile): 2023-05-13 23:20:19.460162 => 2023-05-13 23:20:19.465743
+[0m23:20:19.466158 [debug] [Thread-4  ]: Began executing node test.coffee_shop.unique_user_stitching_id.6500d27439
+[0m23:20:19.468909 [debug] [Thread-4  ]: Writing runtime sql for node "test.coffee_shop.unique_user_stitching_id.6500d27439"
+[0m23:20:19.469490 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
+[0m23:20:19.473404 [debug] [Thread-4  ]: On test.coffee_shop.unique_user_stitching_id.6500d27439: /* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "test.coffee_shop.unique_user_stitching_id.6500d27439"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+
+  select id as unique_field
+  from `aec-students`.`dbt_irisc`.`user_stitching`
+  where id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m23:20:19.495059 [debug] [Thread-7  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=aec-students&j=bq:US:981cb238-86be-4d47-b891-4f73237f7487&page=queryresults
+[0m23:20:19.495928 [debug] [Thread-7  ]: Timing info for test.coffee_shop.source_unique_coffee_shop_orders_id.76bb24edf7 (execute): 2023-05-13 23:20:17.986736 => 2023-05-13 23:20:19.495841
+[0m23:20:19.497157 [info ] [Thread-7  ]: 7 of 11 PASS source_unique_coffee_shop_orders_id ............................... [[32mPASS[0m in 1.69s]
+[0m23:20:19.498652 [debug] [Thread-7  ]: Finished running node test.coffee_shop.source_unique_coffee_shop_orders_id.76bb24edf7
+[0m23:20:19.512021 [debug] [Thread-6  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=aec-students&j=bq:US:3bd35d2a-432e-43a9-abac-7ba1527fe8c3&page=queryresults
+[0m23:20:19.512875 [debug] [Thread-6  ]: Timing info for test.coffee_shop.source_unique_coffee_shop_customers_id.33a28346d5 (execute): 2023-05-13 23:20:17.981004 => 2023-05-13 23:20:19.512792
+[0m23:20:19.514090 [info ] [Thread-6  ]: 6 of 11 PASS source_unique_coffee_shop_customers_id ............................ [[32mPASS[0m in 1.73s]
+[0m23:20:19.515460 [debug] [Thread-6  ]: Finished running node test.coffee_shop.source_unique_coffee_shop_customers_id.33a28346d5
+[0m23:20:19.657557 [debug] [Thread-3  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=aec-students&j=bq:US:7de0b11e-49c4-442a-96ac-f40a88a35fa6&page=queryresults
+[0m23:20:19.658761 [debug] [Thread-3  ]: Timing info for test.coffee_shop.source_not_null_coffee_shop_customers_id.d265e0f7a0 (execute): 2023-05-13 23:20:17.971889 => 2023-05-13 23:20:19.658634
+[0m23:20:19.660215 [info ] [Thread-3  ]: 3 of 11 PASS source_not_null_coffee_shop_customers_id .......................... [[32mPASS[0m in 1.90s]
+[0m23:20:19.661281 [debug] [Thread-3  ]: Finished running node test.coffee_shop.source_not_null_coffee_shop_customers_id.d265e0f7a0
+[0m23:20:19.687430 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=aec-students&j=bq:US:3a6e85bd-bf31-422f-8011-78df5e532333&page=queryresults
+[0m23:20:19.688015 [debug] [Thread-1  ]: Timing info for test.coffee_shop.not_null_customers_customer_id.5c9bf9911d (execute): 2023-05-13 23:20:17.949448 => 2023-05-13 23:20:19.687954
+[0m23:20:19.688768 [info ] [Thread-1  ]: 1 of 11 PASS not_null_customers_customer_id .................................... [[32mPASS[0m in 1.95s]
+[0m23:20:19.689464 [debug] [Thread-1  ]: Finished running node test.coffee_shop.not_null_customers_customer_id.5c9bf9911d
+[0m23:20:19.773803 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=aec-students&j=bq:US:ad5c9747-7efc-4b22-bb95-8d502902fd0b&page=queryresults
+[0m23:20:19.774734 [debug] [Thread-2  ]: Timing info for test.coffee_shop.not_null_user_stitching_id.12ff3725e0 (execute): 2023-05-13 23:20:18.032721 => 2023-05-13 23:20:19.774636
+[0m23:20:19.775908 [info ] [Thread-2  ]: 2 of 11 PASS not_null_user_stitching_id ........................................ [[32mPASS[0m in 2.01s]
+[0m23:20:19.776618 [debug] [Thread-2  ]: Finished running node test.coffee_shop.not_null_user_stitching_id.12ff3725e0
+[0m23:20:20.085124 [debug] [Thread-5  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=aec-students&j=bq:US:3e9f8901-b47d-410e-840b-d8da1134aa7d&page=queryresults
+[0m23:20:20.086227 [debug] [Thread-5  ]: Timing info for test.coffee_shop.test1 (execute): 2023-05-13 23:20:18.743748 => 2023-05-13 23:20:20.086104
+[0m23:20:20.087296 [error] [Thread-5  ]: 9 of 11 FAIL 174397 test1 ...................................................... [[31mFAIL 174397[0m in 1.35s]
+[0m23:20:20.088214 [debug] [Thread-5  ]: Finished running node test.coffee_shop.test1
+[0m23:20:20.346448 [debug] [Thread-8  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=aec-students&j=bq:US:6e63c0d3-1853-48cb-8572-8513cad0c714&page=queryresults
+[0m23:20:20.347991 [debug] [Thread-8  ]: Timing info for test.coffee_shop.unique_customers_customer_id.c5af1ff4b1 (execute): 2023-05-13 23:20:18.924660 => 2023-05-13 23:20:20.347834
+[0m23:20:20.349761 [info ] [Thread-8  ]: 10 of 11 PASS unique_customers_customer_id ..................................... [[32mPASS[0m in 1.43s]
+[0m23:20:20.353023 [debug] [Thread-8  ]: Finished running node test.coffee_shop.unique_customers_customer_id.c5af1ff4b1
+[0m23:20:22.896169 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=aec-students&j=bq:US:40fe4a49-1392-4b04-aa99-e0fd16891875&page=queryresults
+[0m23:20:22.897718 [debug] [Thread-4  ]: Timing info for test.coffee_shop.unique_user_stitching_id.6500d27439 (execute): 2023-05-13 23:20:19.466409 => 2023-05-13 23:20:22.897576
+[0m23:20:22.899530 [info ] [Thread-4  ]: 11 of 11 PASS unique_user_stitching_id ......................................... [[32mPASS[0m in 3.44s]
+[0m23:20:22.900672 [debug] [Thread-4  ]: Finished running node test.coffee_shop.unique_user_stitching_id.6500d27439
+[0m23:20:22.903538 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m23:20:22.904590 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:20:22.904972 [debug] [MainThread]: Connection 'test.coffee_shop.not_null_customers_customer_id.5c9bf9911d' was properly closed.
+[0m23:20:22.905598 [debug] [MainThread]: Connection 'test.coffee_shop.source_not_null_coffee_shop_customers_id.d265e0f7a0' was properly closed.
+[0m23:20:22.905955 [debug] [MainThread]: Connection 'test.coffee_shop.not_null_user_stitching_id.12ff3725e0' was properly closed.
+[0m23:20:22.906288 [debug] [MainThread]: Connection 'test.coffee_shop.unique_user_stitching_id.6500d27439' was properly closed.
+[0m23:20:22.906831 [debug] [MainThread]: Connection 'test.coffee_shop.source_unique_coffee_shop_customers_id.33a28346d5' was properly closed.
+[0m23:20:22.907198 [debug] [MainThread]: Connection 'test.coffee_shop.test1' was properly closed.
+[0m23:20:22.907515 [debug] [MainThread]: Connection 'test.coffee_shop.source_unique_coffee_shop_orders_id.76bb24edf7' was properly closed.
+[0m23:20:22.907870 [debug] [MainThread]: Connection 'test.coffee_shop.unique_customers_customer_id.c5af1ff4b1' was properly closed.
+[0m23:20:22.908355 [info ] [MainThread]: 
+[0m23:20:22.909320 [info ] [MainThread]: Finished running 11 tests in 0 hours 0 minutes and 6.29 seconds (6.29s).
+[0m23:20:22.916320 [debug] [MainThread]: Command end result
+[0m23:20:22.932964 [info ] [MainThread]: 
+[0m23:20:22.934185 [info ] [MainThread]: [31mCompleted with 3 errors and 0 warnings:[0m
+[0m23:20:22.935161 [info ] [MainThread]: 
+[0m23:20:22.936978 [error] [MainThread]: [33mRuntime Error in test source_not_null_coffee_shop_pageviews_id (models/schema.yaml)[0m
+[0m23:20:22.938228 [error] [MainThread]:   404 Not found: Table analytics-engineers-club:coffee_shop.pageviews was not found in location US
+[0m23:20:22.939533 [error] [MainThread]:   
+[0m23:20:22.940919 [error] [MainThread]:   Location: US
+[0m23:20:22.941833 [error] [MainThread]:   Job ID: 7b984073-4f74-4933-a7ac-14baf0b39a8b
+[0m23:20:22.943044 [error] [MainThread]:   
+[0m23:20:22.944152 [info ] [MainThread]: 
+[0m23:20:22.945613 [error] [MainThread]: [33mRuntime Error in test source_unique_coffee_shop_pageviews_id (models/schema.yaml)[0m
+[0m23:20:22.946477 [error] [MainThread]:   404 Not found: Table analytics-engineers-club:coffee_shop.pageviews was not found in location US
+[0m23:20:22.947340 [error] [MainThread]:   
+[0m23:20:22.949656 [error] [MainThread]:   Location: US
+[0m23:20:22.950730 [error] [MainThread]:   Job ID: 429eb146-f66f-40fd-be1f-c124001a7297
+[0m23:20:22.952003 [error] [MainThread]:   
+[0m23:20:22.952743 [info ] [MainThread]: 
+[0m23:20:22.953832 [error] [MainThread]: [31mFailure in test test1 (tests/test1.sql)[0m
+[0m23:20:22.954643 [error] [MainThread]:   Got 174397 results, configured to fail if != 0
+[0m23:20:22.955756 [info ] [MainThread]: 
+[0m23:20:22.956592 [info ] [MainThread]:   compiled Code at target/compiled/coffee_shop/tests/test1.sql
+[0m23:20:22.957706 [info ] [MainThread]: 
+[0m23:20:22.958483 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=3 SKIP=0 TOTAL=11
+[0m23:20:22.959730 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f259c213460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f257a7a2dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f259c2a8d90>]}
+[0m23:20:22.960345 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-05-13 23:24:36.222841 | 8fe94825-d504-46c4-8e1b-ff5ea9f6a966 ==============================
+[0m23:24:36.222841 [info ] [MainThread]: Running with dbt=1.4.5
+[0m23:24:36.225764 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/vscode/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'indirect_selection': 'eager', 'which': 'test', 'rpc_method': 'test'}
+[0m23:24:36.226235 [debug] [MainThread]: Tracking: tracking
+[0m23:24:36.232929 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1315412ee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1315479730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13154791f0>]}
+[0m23:24:36.252627 [debug] [MainThread]: checksum: e05dd7cee44d39ae8ac27965cacd8a6d8d0ab4e8185101e0db84e98f79bee0b6, vars: {}, profile: None, target: None, version: 1.4.5
+[0m23:24:36.303586 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m23:24:36.304375 [debug] [MainThread]: Partial parsing: updated file: coffee_shop://models/schema.yaml
+[0m23:24:36.432549 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.coffee_shop_irisc
+[0m23:24:36.438973 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8fe94825-d504-46c4-8e1b-ff5ea9f6a966', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1315276790>]}
+[0m23:24:36.446844 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8fe94825-d504-46c4-8e1b-ff5ea9f6a966', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13153c7520>]}
+[0m23:24:36.447304 [info ] [MainThread]: Found 3 models, 11 tests, 0 snapshots, 0 analyses, 337 macros, 0 operations, 0 seed files, 3 sources, 0 exposures, 0 metrics
+[0m23:24:36.447836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8fe94825-d504-46c4-8e1b-ff5ea9f6a966', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13153c7550>]}
+[0m23:24:36.450303 [info ] [MainThread]: 
+[0m23:24:36.452698 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m23:24:36.454589 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_aec-students_dbt_irisc'
+[0m23:24:36.455003 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:24:37.488499 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8fe94825-d504-46c4-8e1b-ff5ea9f6a966', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1315286ca0>]}
+[0m23:24:37.489962 [info ] [MainThread]: Concurrency: 8 threads (target='dev')
+[0m23:24:37.490599 [info ] [MainThread]: 
+[0m23:24:37.496280 [debug] [Thread-1  ]: Began running node test.coffee_shop.not_null_customers_customer_id.5c9bf9911d
+[0m23:24:37.498895 [info ] [Thread-1  ]: 1 of 11 START test not_null_customers_customer_id .............................. [RUN]
+[0m23:24:37.497003 [debug] [Thread-3  ]: Began running node test.coffee_shop.source_not_null_coffee_shop_customers_id.d265e0f7a0
+[0m23:24:37.500237 [info ] [Thread-3  ]: 3 of 11 START test source_not_null_coffee_shop_customers_id .................... [RUN]
+[0m23:24:37.501092 [debug] [Thread-3  ]: Acquiring new bigquery connection 'test.coffee_shop.source_not_null_coffee_shop_customers_id.d265e0f7a0'
+[0m23:24:37.501419 [debug] [Thread-3  ]: Began compiling node test.coffee_shop.source_not_null_coffee_shop_customers_id.d265e0f7a0
+[0m23:24:37.498174 [debug] [Thread-7  ]: Began running node test.coffee_shop.source_unique_coffee_shop_orders_id.76bb24edf7
+[0m23:24:37.498489 [debug] [Thread-8  ]: Began running node test.coffee_shop.source_unique_web_tracking_pageviews_id.680e110e5f
+[0m23:24:37.499860 [debug] [Thread-1  ]: Acquiring new bigquery connection 'test.coffee_shop.not_null_customers_customer_id.5c9bf9911d'
+[0m23:24:37.520110 [debug] [Thread-1  ]: Began compiling node test.coffee_shop.not_null_customers_customer_id.5c9bf9911d
+[0m23:24:37.497277 [debug] [Thread-4  ]: Began running node test.coffee_shop.source_not_null_coffee_shop_orders_id.734c497108
+[0m23:24:37.525498 [info ] [Thread-4  ]: 4 of 11 START test source_not_null_coffee_shop_orders_id ....................... [RUN]
+[0m23:24:37.525084 [debug] [Thread-1  ]: Writing injected SQL for node "test.coffee_shop.not_null_customers_customer_id.5c9bf9911d"
+[0m23:24:37.518463 [debug] [Thread-3  ]: Writing injected SQL for node "test.coffee_shop.source_not_null_coffee_shop_customers_id.d265e0f7a0"
+[0m23:24:37.518858 [info ] [Thread-7  ]: 7 of 11 START test source_unique_coffee_shop_orders_id ......................... [RUN]
+[0m23:24:37.527446 [debug] [Thread-7  ]: Acquiring new bigquery connection 'test.coffee_shop.source_unique_coffee_shop_orders_id.76bb24edf7'
+[0m23:24:37.528261 [debug] [Thread-7  ]: Began compiling node test.coffee_shop.source_unique_coffee_shop_orders_id.76bb24edf7
+[0m23:24:37.497529 [debug] [Thread-5  ]: Began running node test.coffee_shop.source_not_null_web_tracking_pageviews_id.8953365196
+[0m23:24:37.497890 [debug] [Thread-6  ]: Began running node test.coffee_shop.source_unique_coffee_shop_customers_id.33a28346d5
+[0m23:24:37.526374 [debug] [Thread-4  ]: Acquiring new bigquery connection 'test.coffee_shop.source_not_null_coffee_shop_orders_id.734c497108'
+[0m23:24:37.519522 [info ] [Thread-8  ]: 8 of 11 START test source_unique_web_tracking_pageviews_id ..................... [RUN]
+[0m23:24:37.539402 [debug] [Thread-8  ]: Acquiring new bigquery connection 'test.coffee_shop.source_unique_web_tracking_pageviews_id.680e110e5f'
+[0m23:24:37.528599 [debug] [Thread-3  ]: Timing info for test.coffee_shop.source_not_null_coffee_shop_customers_id.d265e0f7a0 (compile): 2023-05-13 23:24:37.501699 => 2023-05-13 23:24:37.528492
+[0m23:24:37.529019 [debug] [Thread-1  ]: Timing info for test.coffee_shop.not_null_customers_customer_id.5c9bf9911d (compile): 2023-05-13 23:24:37.520634 => 2023-05-13 23:24:37.528948
+[0m23:24:37.540953 [debug] [Thread-1  ]: Began executing node test.coffee_shop.not_null_customers_customer_id.5c9bf9911d
+[0m23:24:37.538218 [debug] [Thread-7  ]: Writing injected SQL for node "test.coffee_shop.source_unique_coffee_shop_orders_id.76bb24edf7"
+[0m23:24:37.538666 [debug] [Thread-4  ]: Began compiling node test.coffee_shop.source_not_null_coffee_shop_orders_id.734c497108
+[0m23:24:37.496686 [debug] [Thread-2  ]: Began running node test.coffee_shop.not_null_user_stitching_id.12ff3725e0
+[0m23:24:37.539707 [debug] [Thread-8  ]: Began compiling node test.coffee_shop.source_unique_web_tracking_pageviews_id.680e110e5f
+[0m23:24:37.535141 [info ] [Thread-6  ]: 6 of 11 START test source_unique_coffee_shop_customers_id ...................... [RUN]
+[0m23:24:37.579756 [debug] [Thread-6  ]: Acquiring new bigquery connection 'test.coffee_shop.source_unique_coffee_shop_customers_id.33a28346d5'
+[0m23:24:37.540226 [debug] [Thread-3  ]: Began executing node test.coffee_shop.source_not_null_coffee_shop_customers_id.d265e0f7a0
+[0m23:24:37.561550 [debug] [Thread-1  ]: Writing runtime sql for node "test.coffee_shop.not_null_customers_customer_id.5c9bf9911d"
+[0m23:24:37.566195 [debug] [Thread-4  ]: Writing injected SQL for node "test.coffee_shop.source_not_null_coffee_shop_orders_id.734c497108"
+[0m23:24:37.583589 [debug] [Thread-4  ]: Timing info for test.coffee_shop.source_not_null_coffee_shop_orders_id.734c497108 (compile): 2023-05-13 23:24:37.561964 => 2023-05-13 23:24:37.583503
+[0m23:24:37.566757 [info ] [Thread-2  ]: 2 of 11 START test not_null_user_stitching_id .................................. [RUN]
+[0m23:24:37.584982 [debug] [Thread-2  ]: Acquiring new bigquery connection 'test.coffee_shop.not_null_user_stitching_id.12ff3725e0'
+[0m23:24:37.580194 [debug] [Thread-6  ]: Began compiling node test.coffee_shop.source_unique_coffee_shop_customers_id.33a28346d5
+[0m23:24:37.534602 [info ] [Thread-5  ]: 5 of 11 START test source_not_null_web_tracking_pageviews_id ................... [RUN]
+[0m23:24:37.593126 [debug] [Thread-5  ]: Acquiring new bigquery connection 'test.coffee_shop.source_not_null_web_tracking_pageviews_id.8953365196'
+[0m23:24:37.585422 [debug] [Thread-2  ]: Began compiling node test.coffee_shop.not_null_user_stitching_id.12ff3725e0
+[0m23:24:37.575537 [debug] [Thread-7  ]: Timing info for test.coffee_shop.source_unique_coffee_shop_orders_id.76bb24edf7 (compile): 2023-05-13 23:24:37.529244 => 2023-05-13 23:24:37.575458
+[0m23:24:37.599396 [debug] [Thread-7  ]: Began executing node test.coffee_shop.source_unique_coffee_shop_orders_id.76bb24edf7
+[0m23:24:37.601902 [debug] [Thread-7  ]: Writing runtime sql for node "test.coffee_shop.source_unique_coffee_shop_orders_id.76bb24edf7"
+[0m23:24:37.584066 [debug] [Thread-4  ]: Began executing node test.coffee_shop.source_not_null_coffee_shop_orders_id.734c497108
+[0m23:24:37.605910 [debug] [Thread-4  ]: Writing runtime sql for node "test.coffee_shop.source_not_null_coffee_shop_orders_id.734c497108"
+[0m23:24:37.593559 [debug] [Thread-5  ]: Began compiling node test.coffee_shop.source_not_null_web_tracking_pageviews_id.8953365196
+[0m23:24:37.592386 [debug] [Thread-6  ]: Writing injected SQL for node "test.coffee_shop.source_unique_coffee_shop_customers_id.33a28346d5"
+[0m23:24:37.599029 [debug] [Thread-2  ]: Writing injected SQL for node "test.coffee_shop.not_null_user_stitching_id.12ff3725e0"
+[0m23:24:37.582719 [debug] [Thread-3  ]: Writing runtime sql for node "test.coffee_shop.source_not_null_coffee_shop_customers_id.d265e0f7a0"
+[0m23:24:37.572982 [debug] [Thread-8  ]: Writing injected SQL for node "test.coffee_shop.source_unique_web_tracking_pageviews_id.680e110e5f"
+[0m23:24:37.616661 [debug] [Thread-8  ]: Timing info for test.coffee_shop.source_unique_web_tracking_pageviews_id.680e110e5f (compile): 2023-05-13 23:24:37.567069 => 2023-05-13 23:24:37.616575
+[0m23:24:37.618027 [debug] [Thread-8  ]: Began executing node test.coffee_shop.source_unique_web_tracking_pageviews_id.680e110e5f
+[0m23:24:37.622380 [debug] [Thread-8  ]: Writing runtime sql for node "test.coffee_shop.source_unique_web_tracking_pageviews_id.680e110e5f"
+[0m23:24:37.614613 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m23:24:37.615064 [debug] [Thread-6  ]: Timing info for test.coffee_shop.source_unique_coffee_shop_customers_id.33a28346d5 (compile): 2023-05-13 23:24:37.585746 => 2023-05-13 23:24:37.614974
+[0m23:24:37.615707 [debug] [Thread-2  ]: Timing info for test.coffee_shop.not_null_user_stitching_id.12ff3725e0 (compile): 2023-05-13 23:24:37.594158 => 2023-05-13 23:24:37.615611
+[0m23:24:37.615979 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m23:24:37.625146 [debug] [Thread-3  ]: On test.coffee_shop.source_not_null_coffee_shop_customers_id.d265e0f7a0: /* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "test.coffee_shop.source_not_null_coffee_shop_customers_id.d265e0f7a0"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from `analytics-engineers-club`.`coffee_shop`.`customers`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:24:37.593961 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m23:24:37.629047 [debug] [Thread-1  ]: On test.coffee_shop.not_null_customers_customer_id.5c9bf9911d: /* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "test.coffee_shop.not_null_customers_customer_id.5c9bf9911d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select customer_id
+from `aec-students`.`dbt_irisc`.`customers`
+where customer_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:24:37.624157 [debug] [Thread-6  ]: Began executing node test.coffee_shop.source_unique_coffee_shop_customers_id.33a28346d5
+[0m23:24:37.636025 [debug] [Thread-6  ]: Writing runtime sql for node "test.coffee_shop.source_unique_coffee_shop_customers_id.33a28346d5"
+[0m23:24:37.624681 [debug] [Thread-2  ]: Began executing node test.coffee_shop.not_null_user_stitching_id.12ff3725e0
+[0m23:24:37.640870 [debug] [Thread-2  ]: Writing runtime sql for node "test.coffee_shop.not_null_user_stitching_id.12ff3725e0"
+[0m23:24:37.642438 [debug] [Thread-2  ]: Opening a new connection, currently in state init
+[0m23:24:37.643013 [debug] [Thread-2  ]: On test.coffee_shop.not_null_user_stitching_id.12ff3725e0: /* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "test.coffee_shop.not_null_user_stitching_id.12ff3725e0"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from `aec-students`.`dbt_irisc`.`user_stitching`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:24:37.623642 [debug] [Thread-4  ]: On test.coffee_shop.source_not_null_coffee_shop_orders_id.734c497108: /* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "test.coffee_shop.source_not_null_coffee_shop_orders_id.734c497108"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from `analytics-engineers-club`.`coffee_shop`.`orders`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:24:37.613541 [debug] [Thread-5  ]: Writing injected SQL for node "test.coffee_shop.source_not_null_web_tracking_pageviews_id.8953365196"
+[0m23:24:37.613943 [debug] [Thread-7  ]: Opening a new connection, currently in state init
+[0m23:24:37.647561 [debug] [Thread-6  ]: Opening a new connection, currently in state init
+[0m23:24:37.652701 [debug] [Thread-6  ]: On test.coffee_shop.source_unique_coffee_shop_customers_id.33a28346d5: /* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "test.coffee_shop.source_unique_coffee_shop_customers_id.33a28346d5"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+
+  select id as unique_field
+  from `analytics-engineers-club`.`coffee_shop`.`customers`
+  where id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m23:24:37.652019 [debug] [Thread-7  ]: On test.coffee_shop.source_unique_coffee_shop_orders_id.76bb24edf7: /* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "test.coffee_shop.source_unique_coffee_shop_orders_id.76bb24edf7"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+
+  select id as unique_field
+  from `analytics-engineers-club`.`coffee_shop`.`orders`
+  where id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m23:24:37.649556 [debug] [Thread-8  ]: Opening a new connection, currently in state init
+[0m23:24:37.658773 [debug] [Thread-8  ]: On test.coffee_shop.source_unique_web_tracking_pageviews_id.680e110e5f: /* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "test.coffee_shop.source_unique_web_tracking_pageviews_id.680e110e5f"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+
+  select id as unique_field
+  from `analytics-engineers-club`.`web_tracking`.`pageviews`
+  where id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m23:24:37.657953 [debug] [Thread-5  ]: Timing info for test.coffee_shop.source_not_null_web_tracking_pageviews_id.8953365196 (compile): 2023-05-13 23:24:37.606386 => 2023-05-13 23:24:37.657879
+[0m23:24:37.660836 [debug] [Thread-5  ]: Began executing node test.coffee_shop.source_not_null_web_tracking_pageviews_id.8953365196
+[0m23:24:37.664226 [debug] [Thread-5  ]: Writing runtime sql for node "test.coffee_shop.source_not_null_web_tracking_pageviews_id.8953365196"
+[0m23:24:37.666312 [debug] [Thread-5  ]: Opening a new connection, currently in state init
+[0m23:24:37.666932 [debug] [Thread-5  ]: On test.coffee_shop.source_not_null_web_tracking_pageviews_id.8953365196: /* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "test.coffee_shop.source_not_null_web_tracking_pageviews_id.8953365196"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from `analytics-engineers-club`.`web_tracking`.`pageviews`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:24:39.093676 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=aec-students&j=bq:US:50b78b22-16a0-45c7-b7c3-27109c762c75&page=queryresults
+[0m23:24:39.095250 [debug] [Thread-4  ]: Timing info for test.coffee_shop.source_not_null_coffee_shop_orders_id.734c497108 (execute): 2023-05-13 23:24:37.602547 => 2023-05-13 23:24:39.095163
+[0m23:24:39.096173 [info ] [Thread-4  ]: 4 of 11 PASS source_not_null_coffee_shop_orders_id ............................. [[32mPASS[0m in 1.57s]
+[0m23:24:39.098874 [debug] [Thread-4  ]: Finished running node test.coffee_shop.source_not_null_coffee_shop_orders_id.734c497108
+[0m23:24:39.099357 [debug] [Thread-4  ]: Began running node test.coffee_shop.test1
+[0m23:24:39.099824 [info ] [Thread-4  ]: 9 of 11 START test test1 ....................................................... [RUN]
+[0m23:24:39.100813 [debug] [Thread-4  ]: Acquiring new bigquery connection 'test.coffee_shop.test1'
+[0m23:24:39.101144 [debug] [Thread-4  ]: Began compiling node test.coffee_shop.test1
+[0m23:24:39.103823 [debug] [Thread-4  ]: Writing injected SQL for node "test.coffee_shop.test1"
+[0m23:24:39.104385 [debug] [Thread-4  ]: Timing info for test.coffee_shop.test1 (compile): 2023-05-13 23:24:39.101365 => 2023-05-13 23:24:39.104313
+[0m23:24:39.104757 [debug] [Thread-4  ]: Began executing node test.coffee_shop.test1
+[0m23:24:39.105998 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=aec-students&j=bq:US:1af044b1-094c-4500-b866-d51cb5cb685f&page=queryresults
+[0m23:24:39.108681 [debug] [Thread-4  ]: Writing runtime sql for node "test.coffee_shop.test1"
+[0m23:24:39.109293 [debug] [Thread-2  ]: Timing info for test.coffee_shop.not_null_user_stitching_id.12ff3725e0 (execute): 2023-05-13 23:24:37.638298 => 2023-05-13 23:24:39.109239
+[0m23:24:39.110633 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
+[0m23:24:39.111173 [debug] [Thread-4  ]: On test.coffee_shop.test1: /* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "test.coffee_shop.test1"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      select *
+from `aec-students.dbt_irisc.customers`
+where customer_id is not null
+      
+    ) dbt_internal_test
+[0m23:24:39.110277 [info ] [Thread-2  ]: 2 of 11 PASS not_null_user_stitching_id ........................................ [[32mPASS[0m in 1.53s]
+[0m23:24:39.114182 [debug] [Thread-2  ]: Finished running node test.coffee_shop.not_null_user_stitching_id.12ff3725e0
+[0m23:24:39.114751 [debug] [Thread-2  ]: Began running node test.coffee_shop.unique_customers_customer_id.c5af1ff4b1
+[0m23:24:39.115222 [info ] [Thread-2  ]: 10 of 11 START test unique_customers_customer_id ............................... [RUN]
+[0m23:24:39.116304 [debug] [Thread-2  ]: Acquiring new bigquery connection 'test.coffee_shop.unique_customers_customer_id.c5af1ff4b1'
+[0m23:24:39.116736 [debug] [Thread-2  ]: Began compiling node test.coffee_shop.unique_customers_customer_id.c5af1ff4b1
+[0m23:24:39.122652 [debug] [Thread-2  ]: Writing injected SQL for node "test.coffee_shop.unique_customers_customer_id.c5af1ff4b1"
+[0m23:24:39.128007 [debug] [Thread-2  ]: Timing info for test.coffee_shop.unique_customers_customer_id.c5af1ff4b1 (compile): 2023-05-13 23:24:39.117412 => 2023-05-13 23:24:39.127919
+[0m23:24:39.128527 [debug] [Thread-2  ]: Began executing node test.coffee_shop.unique_customers_customer_id.c5af1ff4b1
+[0m23:24:39.132771 [debug] [Thread-2  ]: Writing runtime sql for node "test.coffee_shop.unique_customers_customer_id.c5af1ff4b1"
+[0m23:24:39.133566 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m23:24:39.134180 [debug] [Thread-2  ]: On test.coffee_shop.unique_customers_customer_id.c5af1ff4b1: /* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "test.coffee_shop.unique_customers_customer_id.c5af1ff4b1"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+
+  select customer_id as unique_field
+  from `aec-students`.`dbt_irisc`.`customers`
+  where customer_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m23:24:39.136296 [debug] [Thread-3  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=aec-students&j=bq:US:e17244ab-b956-4abc-af13-28be1fd04fca&page=queryresults
+[0m23:24:39.137163 [debug] [Thread-3  ]: Timing info for test.coffee_shop.source_not_null_coffee_shop_customers_id.d265e0f7a0 (execute): 2023-05-13 23:24:37.580524 => 2023-05-13 23:24:39.137075
+[0m23:24:39.138309 [info ] [Thread-3  ]: 3 of 11 PASS source_not_null_coffee_shop_customers_id .......................... [[32mPASS[0m in 1.64s]
+[0m23:24:39.139489 [debug] [Thread-3  ]: Finished running node test.coffee_shop.source_not_null_coffee_shop_customers_id.d265e0f7a0
+[0m23:24:39.140216 [debug] [Thread-3  ]: Began running node test.coffee_shop.unique_user_stitching_id.6500d27439
+[0m23:24:39.141067 [info ] [Thread-3  ]: 11 of 11 START test unique_user_stitching_id ................................... [RUN]
+[0m23:24:39.142854 [debug] [Thread-3  ]: Acquiring new bigquery connection 'test.coffee_shop.unique_user_stitching_id.6500d27439'
+[0m23:24:39.146769 [debug] [Thread-7  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=aec-students&j=bq:US:e66b11df-7c30-4bee-81f1-5a93b9eb605b&page=queryresults
+[0m23:24:39.148113 [debug] [Thread-7  ]: Timing info for test.coffee_shop.source_unique_coffee_shop_orders_id.76bb24edf7 (execute): 2023-05-13 23:24:37.599610 => 2023-05-13 23:24:39.148007
+[0m23:24:39.149281 [info ] [Thread-7  ]: 7 of 11 PASS source_unique_coffee_shop_orders_id ............................... [[32mPASS[0m in 1.62s]
+[0m23:24:39.150466 [debug] [Thread-7  ]: Finished running node test.coffee_shop.source_unique_coffee_shop_orders_id.76bb24edf7
+[0m23:24:39.147302 [debug] [Thread-3  ]: Began compiling node test.coffee_shop.unique_user_stitching_id.6500d27439
+[0m23:24:39.158815 [debug] [Thread-3  ]: Writing injected SQL for node "test.coffee_shop.unique_user_stitching_id.6500d27439"
+[0m23:24:39.162390 [debug] [Thread-3  ]: Timing info for test.coffee_shop.unique_user_stitching_id.6500d27439 (compile): 2023-05-13 23:24:39.151100 => 2023-05-13 23:24:39.162015
+[0m23:24:39.165423 [debug] [Thread-3  ]: Began executing node test.coffee_shop.unique_user_stitching_id.6500d27439
+[0m23:24:39.169689 [debug] [Thread-3  ]: Writing runtime sql for node "test.coffee_shop.unique_user_stitching_id.6500d27439"
+[0m23:24:39.179137 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m23:24:39.179554 [debug] [Thread-3  ]: On test.coffee_shop.unique_user_stitching_id.6500d27439: /* {"app": "dbt", "dbt_version": "1.4.5", "profile_name": "coffee_shop_irisc", "target_name": "dev", "node_id": "test.coffee_shop.unique_user_stitching_id.6500d27439"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+
+  select id as unique_field
+  from `aec-students`.`dbt_irisc`.`user_stitching`
+  where id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m23:24:39.238451 [debug] [Thread-5  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=aec-students&j=bq:US:91d3a7da-ff4b-4f38-bb6b-eca9c797c8d0&page=queryresults
+[0m23:24:39.239414 [debug] [Thread-5  ]: Timing info for test.coffee_shop.source_not_null_web_tracking_pageviews_id.8953365196 (execute): 2023-05-13 23:24:37.661053 => 2023-05-13 23:24:39.239320
+[0m23:24:39.240705 [info ] [Thread-5  ]: 5 of 11 PASS source_not_null_web_tracking_pageviews_id ......................... [[32mPASS[0m in 1.65s]
+[0m23:24:39.241925 [debug] [Thread-5  ]: Finished running node test.coffee_shop.source_not_null_web_tracking_pageviews_id.8953365196
+[0m23:24:39.250271 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=aec-students&j=bq:US:c2aedf0a-f7fa-459c-ac7e-f2e42016320e&page=queryresults
+[0m23:24:39.251098 [debug] [Thread-1  ]: Timing info for test.coffee_shop.not_null_customers_customer_id.5c9bf9911d (execute): 2023-05-13 23:24:37.541253 => 2023-05-13 23:24:39.251018
+[0m23:24:39.252384 [info ] [Thread-1  ]: 1 of 11 PASS not_null_customers_customer_id .................................... [[32mPASS[0m in 1.75s]
+[0m23:24:39.253558 [debug] [Thread-1  ]: Finished running node test.coffee_shop.not_null_customers_customer_id.5c9bf9911d
+[0m23:24:39.289777 [debug] [Thread-6  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=aec-students&j=bq:US:7172ebc0-9c75-4c46-8cab-1e93e27c1906&page=queryresults
+[0m23:24:39.290435 [debug] [Thread-6  ]: Timing info for test.coffee_shop.source_unique_coffee_shop_customers_id.33a28346d5 (execute): 2023-05-13 23:24:37.631511 => 2023-05-13 23:24:39.290377
+[0m23:24:39.291225 [info ] [Thread-6  ]: 6 of 11 PASS source_unique_coffee_shop_customers_id ............................ [[32mPASS[0m in 1.71s]
+[0m23:24:39.292544 [debug] [Thread-6  ]: Finished running node test.coffee_shop.source_unique_coffee_shop_customers_id.33a28346d5
+[0m23:24:40.165843 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=aec-students&j=bq:US:b2b0fd7e-944d-47e0-948c-3fc25c78e1ce&page=queryresults
+[0m23:24:40.166886 [debug] [Thread-4  ]: Timing info for test.coffee_shop.test1 (execute): 2023-05-13 23:24:39.106234 => 2023-05-13 23:24:40.166762
+[0m23:24:40.167879 [error] [Thread-4  ]: 9 of 11 FAIL 174397 test1 ...................................................... [[31mFAIL 174397[0m in 1.07s]
+[0m23:24:40.168760 [debug] [Thread-4  ]: Finished running node test.coffee_shop.test1
+[0m23:24:40.215475 [debug] [Thread-3  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=aec-students&j=bq:US:428b480d-92ed-4f24-8f88-aaebdd0a09ff&page=queryresults
+[0m23:24:40.216213 [debug] [Thread-3  ]: Timing info for test.coffee_shop.unique_user_stitching_id.6500d27439 (execute): 2023-05-13 23:24:39.166291 => 2023-05-13 23:24:40.216140
+[0m23:24:40.217905 [info ] [Thread-3  ]: 11 of 11 PASS unique_user_stitching_id ......................................... [[32mPASS[0m in 1.08s]
+[0m23:24:40.218754 [debug] [Thread-3  ]: Finished running node test.coffee_shop.unique_user_stitching_id.6500d27439
+[0m23:24:40.257259 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=aec-students&j=bq:US:33a664df-af6c-4607-ac58-2096f525533c&page=queryresults
+[0m23:24:40.257988 [debug] [Thread-2  ]: Timing info for test.coffee_shop.unique_customers_customer_id.c5af1ff4b1 (execute): 2023-05-13 23:24:39.128911 => 2023-05-13 23:24:40.257922
+[0m23:24:40.258837 [info ] [Thread-2  ]: 10 of 11 PASS unique_customers_customer_id ..................................... [[32mPASS[0m in 1.14s]
+[0m23:24:40.259508 [debug] [Thread-2  ]: Finished running node test.coffee_shop.unique_customers_customer_id.c5af1ff4b1
+[0m23:24:44.293458 [debug] [Thread-8  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=aec-students&j=bq:US:7924638f-6c23-474f-90a8-309ae53edf0e&page=queryresults
+[0m23:24:44.294284 [debug] [Thread-8  ]: Timing info for test.coffee_shop.source_unique_web_tracking_pageviews_id.680e110e5f (execute): 2023-05-13 23:24:37.618428 => 2023-05-13 23:24:44.294199
+[0m23:24:44.295201 [info ] [Thread-8  ]: 8 of 11 PASS source_unique_web_tracking_pageviews_id ........................... [[32mPASS[0m in 6.76s]
+[0m23:24:44.295875 [debug] [Thread-8  ]: Finished running node test.coffee_shop.source_unique_web_tracking_pageviews_id.680e110e5f
+[0m23:24:44.298466 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m23:24:44.299575 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:24:44.299890 [debug] [MainThread]: Connection 'test.coffee_shop.not_null_customers_customer_id.5c9bf9911d' was properly closed.
+[0m23:24:44.300166 [debug] [MainThread]: Connection 'test.coffee_shop.unique_user_stitching_id.6500d27439' was properly closed.
+[0m23:24:44.300442 [debug] [MainThread]: Connection 'test.coffee_shop.test1' was properly closed.
+[0m23:24:44.300705 [debug] [MainThread]: Connection 'test.coffee_shop.source_unique_coffee_shop_orders_id.76bb24edf7' was properly closed.
+[0m23:24:44.300975 [debug] [MainThread]: Connection 'test.coffee_shop.source_unique_web_tracking_pageviews_id.680e110e5f' was properly closed.
+[0m23:24:44.301270 [debug] [MainThread]: Connection 'test.coffee_shop.source_unique_coffee_shop_customers_id.33a28346d5' was properly closed.
+[0m23:24:44.301546 [debug] [MainThread]: Connection 'test.coffee_shop.unique_customers_customer_id.c5af1ff4b1' was properly closed.
+[0m23:24:44.301799 [debug] [MainThread]: Connection 'test.coffee_shop.source_not_null_web_tracking_pageviews_id.8953365196' was properly closed.
+[0m23:24:44.302156 [info ] [MainThread]: 
+[0m23:24:44.302724 [info ] [MainThread]: Finished running 11 tests in 0 hours 0 minutes and 7.85 seconds (7.85s).
+[0m23:24:44.304122 [debug] [MainThread]: Command end result
+[0m23:24:44.318841 [info ] [MainThread]: 
+[0m23:24:44.319441 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m23:24:44.319952 [info ] [MainThread]: 
+[0m23:24:44.320811 [error] [MainThread]: [31mFailure in test test1 (tests/test1.sql)[0m
+[0m23:24:44.321361 [error] [MainThread]:   Got 174397 results, configured to fail if != 0
+[0m23:24:44.321877 [info ] [MainThread]: 
+[0m23:24:44.322731 [info ] [MainThread]:   compiled Code at target/compiled/coffee_shop/tests/test1.sql
+[0m23:24:44.323356 [info ] [MainThread]: 
+[0m23:24:44.323883 [info ] [MainThread]: Done. PASS=10 WARN=0 ERROR=1 SKIP=0 TOTAL=11
+[0m23:24:44.325141 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f131512fa60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1315412ee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1315276d90>]}
+[0m23:24:44.325601 [debug] [MainThread]: Flushing usage events

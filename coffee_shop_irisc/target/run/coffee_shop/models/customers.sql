@@ -8,7 +8,7 @@
     OPTIONS()
     as (
       
- 
+
 select 
   customers.id as customer_id
   , name
