@@ -8,6 +8,6 @@ select
   , email
   , min(created_at) as first_order_at
   , count(*) as number_of_orders
-from `analytics-engineers-club.coffee_shop.customers` customers
-left join `analytics-engineers-club.coffee_shop.orders` orders on customers.id=orders.customer_id
+from {{ source ('customers')}} customers
+left join {{ source ('orders')}} orders on customers.id=orders.customer_id
 group by 1,2,3
