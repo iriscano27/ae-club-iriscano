@@ -2,18 +2,23 @@
     materialized='table'
  ) }}
 
-select a.id
-  , #### as session_id
-  , a.visitor_id
-  , a.device_type
-  , a.timestamp
-  , a.page
-  , a.customer_id
-from {{ ref ('user_stitching') }}
+with base as (
+select * from {{ ref ('user_stitching') }})
 
+, previous_timestamp as (
+  select *,lag(timestamp) OVER (PARTITION BY visitor_id ORDER BY timestamp) as lagged_timestamp
+  from base)
 
-`analytics-engineers-club.web_tracking.pageviews` a
-left join (select distinct customer_id as customer_id, max(visitor_id) as vistor_id
-    from `analytics-engineers-club.web_tracking.pageviews`
-    where customer_id is not null
-    group by 1) b on a.customer_id=b.customer_id
+, diff as (
+  select *, date_diff(timestamp, lagged_timestamp, minute) as difference_minutes
+  from previous_timestamp)
+
+, new_session as (
+  select *, cast(coalesce(difference_minutes > 30, true) as integer) as is_new_session
+  from diff)
+
+, add_session as (
+  select *, sum(is_new_session) over (partition by visitor_id order by timestamp rows between unbounded preceding and current row) as session_number
+  from new_session)
+
+select * from add_session
